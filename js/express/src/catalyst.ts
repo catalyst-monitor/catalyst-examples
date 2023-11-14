@@ -6,10 +6,11 @@ import {
   SESSION_ID_HEADER,
   PAGE_VIEW_ID_HEADER,
   PARENT_FETCH_ID_HEADER,
+  installNodeBase,
 } from '@doctor/javascript-core'
 import crypto from 'crypto'
 
-DoctorServer.init({
+installNodeBase({
   baseUrl: 'http://localhost:7070',
   privateKey: 'CqZNUYrUBaqcsacZCfSO/e4afBQ98WOqFdHQT7N6',
   systemName: 'catalyst-js-react-example',
@@ -31,14 +32,19 @@ export const catalystHandler: RequestHandler = (req, res, next) => {
   }
   createDoctorContext(context, () => {
     try {
+      res.on('finish', () => {
+        DoctorServer.get().recordFetch(
+          req.route?.path ?? 'Unknown',
+          req.params ?? {},
+          res.statusCode,
+          {
+            seconds: (new Date().getTime() - start.getTime()) / 1000,
+            nanos: 0,
+          },
+          context
+        )
+      })
       next()
-      DoctorServer.get().recordFetch(
-        req.route?.path ?? 'Unknown',
-        req.params ?? {},
-        res.statusCode,
-        { seconds: (new Date().getTime() - start.getTime()) / 1000, nanos: 0 },
-        context
-      )
     } catch (e) {
       DoctorServer.get().recordLog('error', e, {}, context)
       throw e

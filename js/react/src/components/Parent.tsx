@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import api from '../lib/api'
 import useAsync from '../lib/async'
 
-export default function Widget() {
+export default function Parent() {
   const params = useParams()
   const id = params.id
 
@@ -12,12 +12,7 @@ export default function Widget() {
       if (id == null) {
         return ''
       }
-
-      if (id == 'client-error') {
-        throw new Error('Got a client error!')
-      }
-
-      return api.fetchWidget(id)
+      return api.fetchParent(id)
     }, [id])
   )
 

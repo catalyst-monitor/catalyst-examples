@@ -8,12 +8,24 @@ const links: { url: string; text: string }[] = [
   },
   { url: '/widgets', text: 'See more widgets here' },
   {
-    url: '/widgets/error',
-    text: 'Get a guaranteed error here.',
+    url: '/widgets/fake-error',
+    text: 'Get a guaranteed server error here.',
+  },
+  {
+    url: '/widgets/client-error',
+    text: 'Get a guaranteed client here.',
   },
   {
     url: '/bye',
     text: 'Really not found',
+  },
+  {
+    url: '/parent/a',
+    text: 'Nested fetches',
+  },
+  {
+    url: '/parent/bad-child',
+    text: 'Nested fetch with an error.',
   },
 ]
 

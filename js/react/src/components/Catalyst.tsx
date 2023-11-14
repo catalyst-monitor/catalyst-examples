@@ -17,8 +17,11 @@ export default function Catalyst({ routes }: { routes: RouteObject[] }) {
       )
 
       const builtPath = matches.map((m) => m.route.path).join('/')
-
-      DoctorClient.get().recordPageView(builtPath, definedParams)
+      // Record the page view in the next frame, so any click handlers will run first.
+      DoctorClient.get().recordPageView(
+        builtPath != '' && location.pathname != '/' ? builtPath : '/',
+        definedParams
+      )
     }
   }, [location.pathname, routes])
 
