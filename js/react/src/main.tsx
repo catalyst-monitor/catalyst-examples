@@ -9,6 +9,7 @@ import GuaranteedError from './components/GauranteedError.tsx'
 import { createRoot } from 'react-dom/client'
 import wrapRoutes from './lib/catalyst.tsx'
 import Parent from './components/Parent.tsx'
+import Counter from './components/Counter.tsx'
 
 const router = createBrowserRouter(
   wrapRoutes([
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       path: '/',
       element: <App />,
     },
+    { path: '/counter', element: <Counter /> },
     {
       path: '/widgets',
       element: <WidgetContainer />,

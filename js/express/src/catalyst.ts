@@ -1,4 +1,4 @@
-import { RequestHandler } from 'express'
+import { ErrorRequestHandler, RequestHandler } from 'express'
 import {
   DoctorServer,
   createDoctorContext,
@@ -7,6 +7,7 @@ import {
   PAGE_VIEW_ID_HEADER,
   PARENT_FETCH_ID_HEADER,
   installNodeBase,
+  getDoctorContext,
 } from '@doctor/javascript-core'
 import crypto from 'crypto'
 
@@ -16,6 +17,22 @@ installNodeBase({
   systemName: 'catalyst-js-react-example',
   version: '1',
 })
+
+export const catalystErrorHandler: ErrorRequestHandler = (
+  err,
+  _req,
+  res,
+  next
+) => {
+  const context = getDoctorContext()
+  if (context != null) {
+    DoctorServer.get().recordLog('error', err, {}, context)
+  }
+  if (res.headersSent) {
+    return next(err)
+  }
+  res.sendStatus(500)
+}
 
 export const catalystHandler: RequestHandler = (req, res, next) => {
   const start = new Date()
@@ -34,6 +51,7 @@ export const catalystHandler: RequestHandler = (req, res, next) => {
     try {
       res.on('finish', () => {
         DoctorServer.get().recordFetch(
+          req.method,
           req.route?.path ?? 'Unknown',
           req.params ?? {},
           res.statusCode,

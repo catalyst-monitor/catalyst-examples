@@ -1,12 +1,12 @@
 import express, { ErrorRequestHandler } from 'express'
-import { catalystHandler } from './catalyst'
+import { catalystErrorHandler, catalystHandler } from './catalyst'
 import cors from 'cors'
 import { catalystNodeFetch as cFetch } from '@doctor/javascript-core'
 
 const app = express()
 const port = 3000
 
-app.use(cors(), catalystHandler)
+app.use(catalystHandler, cors(), catalystErrorHandler)
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -45,6 +45,18 @@ app.get('/child/:childId', (req, res) => {
   }
 
   res.send(`Hello from child: ${childId}!`)
+})
+
+let counter = 0
+
+app.post('/counter', (req, res) => {
+  counter++
+
+  if (counter % 5 == 0) {
+    throw new Error('Counter is a multiple of 5!')
+  }
+
+  res.send(`Got count: ${counter}`)
 })
 
 app.listen(port, () => {

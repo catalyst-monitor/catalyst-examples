@@ -20,6 +20,10 @@ const links: { url: string; text: string }[] = [
     text: 'Really not found',
   },
   {
+    url: '/counter',
+    text: 'A counter',
+  },
+  {
     url: '/parent/a',
     text: 'Nested fetches',
   },
