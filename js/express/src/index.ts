@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express'
 import { catalystErrorHandler, catalystHandler } from './catalyst'
 import cors from 'cors'

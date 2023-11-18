@@ -3,11 +3,10 @@ import { RouteObject } from 'react-router'
 import Catalyst from '../components/Catalyst'
 
 installWebBase({
-  baseUrl: 'http://localhost:7070',
-  version: '0.0.1',
+  version: import.meta.env.VITE_CATALYST_VERSION,
   systemName: 'catalyst-js-react-example',
   userAgent: navigator.userAgent,
-  publicKey: 'UsHtftJZKdkF9WZ7DT4HSWQk08QHwZiUwEwab8wd',
+  publicKey: import.meta.env.VITE_CATALYST_PUBLIC_KEY,
 })
 
 export default function wrapRoutes(routes: RouteObject[]): RouteObject[] {

@@ -7,15 +7,13 @@ import {
   PAGE_VIEW_ID_HEADER,
   PARENT_FETCH_ID_HEADER,
   installNodeBase,
-  getCatalystContext,
 } from '@catalyst-monitor/core'
 import crypto from 'crypto'
 
 installNodeBase({
-  baseUrl: 'http://localhost:7070',
-  privateKey: 'CqZNUYrUBaqcsacZCfSO/e4afBQ98WOqFdHQT7N6',
+  privateKey: process.env.CATALYST_PRIVATE_KEY ?? '',
   systemName: 'catalyst-js-express-example',
-  version: '1',
+  version: process.env.CATALYST_VERSION ?? '',
 })
 
 export const catalystErrorHandler: ErrorRequestHandler = (
