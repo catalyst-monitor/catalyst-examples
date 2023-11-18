@@ -1,12 +1,12 @@
-import express, { ErrorRequestHandler } from 'express'
+import express from 'express'
 import { catalystErrorHandler, catalystHandler } from './catalyst'
 import cors from 'cors'
-import { catalystNodeFetch as cFetch } from '@doctor/javascript-core'
+import { catalystNodeFetch as cFetch } from '@catalyst-monitor/core'
 
 const app = express()
 const port = 3000
 
-app.use(catalystHandler, cors(), catalystErrorHandler)
+app.use(catalystHandler, cors())
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -58,6 +58,8 @@ app.post('/counter', (req, res) => {
 
   res.send(`Got count: ${counter}`)
 })
+
+app.use(catalystErrorHandler)
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`)

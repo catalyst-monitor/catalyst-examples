@@ -1,20 +1,20 @@
 import { ErrorRequestHandler, RequestHandler } from 'express'
 import {
-  DoctorServer,
-  createDoctorContext,
+  CatalystServer,
+  createCatalystContext,
   ServerRequestContext,
   SESSION_ID_HEADER,
   PAGE_VIEW_ID_HEADER,
   PARENT_FETCH_ID_HEADER,
   installNodeBase,
-  getDoctorContext,
-} from '@doctor/javascript-core'
+  getCatalystContext,
+} from '@catalyst-monitor/core'
 import crypto from 'crypto'
 
 installNodeBase({
   baseUrl: 'http://localhost:7070',
   privateKey: 'CqZNUYrUBaqcsacZCfSO/e4afBQ98WOqFdHQT7N6',
-  systemName: 'catalyst-js-react-example',
+  systemName: 'catalyst-js-express-example',
   version: '1',
 })
 
@@ -24,10 +24,7 @@ export const catalystErrorHandler: ErrorRequestHandler = (
   res,
   next
 ) => {
-  const context = getDoctorContext()
-  if (context != null) {
-    DoctorServer.get().recordLog('error', err, {}, context)
-  }
+  console.error(err)
   if (res.headersSent) {
     return next(err)
   }
@@ -47,10 +44,10 @@ export const catalystHandler: RequestHandler = (req, res, next) => {
     pageViewId: getHeader(pageViewId),
     parentFetchId: getHeader(parentFetchId),
   }
-  createDoctorContext(context, () => {
+  createCatalystContext(context, () => {
     try {
       res.on('finish', () => {
-        DoctorServer.get().recordFetch(
+        CatalystServer.get().recordFetch(
           req.method,
           req.route?.path ?? 'Unknown',
           req.params ?? {},
@@ -64,7 +61,7 @@ export const catalystHandler: RequestHandler = (req, res, next) => {
       })
       next()
     } catch (e) {
-      DoctorServer.get().recordLog('error', e, {}, context)
+      CatalystServer.get().recordLog('error', e, {}, context)
       throw e
     }
   })

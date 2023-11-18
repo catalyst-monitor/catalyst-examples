@@ -1,4 +1,4 @@
-import { catalystWebFetch as cFetch } from '@doctor/javascript-core'
+import { catalystWebFetch as cFetch } from '@catalyst-monitor/core'
 
 const baseUrl = 'http://localhost:3000'
 

@@ -1,4 +1,4 @@
-import { installWebBase } from '@doctor/javascript-core'
+import { installWebBase } from '@catalyst-monitor/core'
 import { RouteObject } from 'react-router'
 import Catalyst from '../components/Catalyst'
 
