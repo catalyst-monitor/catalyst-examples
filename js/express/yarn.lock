@@ -7,12 +7,20 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@catalyst-monitor/core@0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.1.tgz#03f2a0f33a21a6b13b6abea53476940bd144d5c2"
-  integrity sha512-XmQ2H/d1fVguQcLkrissV4qd4o9We93zCTv73DHD0FXI0DgkcXYfXGjKZlN1XDo4eO/wNNy0FNKYHWiNUKDHsg==
+"@catalyst-monitor/core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.2.tgz#5f8168d0a8d42dacb3922b2bfe5e49e5aec1db4e"
+  integrity sha512-sOrC1s2zT9GQ6mx+udhc1Tdfh4qCzOf72w1My5+pVFRR6LBoY62dmbwK8LF/UglC5TEIXWWOruoH76g6Ti8zVA==
   dependencies:
     ts-proto "^1.159.2"
+
+"@catalyst-monitor/express@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/express/-/express-0.0.2.tgz#e4e5906b282718b26ff66d6362e42a8346d93ef7"
+  integrity sha512-XZB+5fp0USwAREq+w8HX6Tfrjzpk42kfnn0JKu3H/i2Wef57+DNjVQogO4YlZcys56SCZl3A9Me/aTf3D03R0g==
+  dependencies:
+    "@catalyst-monitor/core" "^0.0.2"
+    express "^4.18.2"
 
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"

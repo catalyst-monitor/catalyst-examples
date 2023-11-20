@@ -213,12 +213,21 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@catalyst-monitor/core@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.1.tgz#03f2a0f33a21a6b13b6abea53476940bd144d5c2"
-  integrity sha512-XmQ2H/d1fVguQcLkrissV4qd4o9We93zCTv73DHD0FXI0DgkcXYfXGjKZlN1XDo4eO/wNNy0FNKYHWiNUKDHsg==
+"@catalyst-monitor/core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.2.tgz#5f8168d0a8d42dacb3922b2bfe5e49e5aec1db4e"
+  integrity sha512-sOrC1s2zT9GQ6mx+udhc1Tdfh4qCzOf72w1My5+pVFRR6LBoY62dmbwK8LF/UglC5TEIXWWOruoH76g6Ti8zVA==
   dependencies:
     ts-proto "^1.159.2"
+
+"@catalyst-monitor/react-router@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/react-router/-/react-router-0.0.2.tgz#fafe8099816eacf08c5e38df0cd1351e55535b86"
+  integrity sha512-GbGuKkHRbQTRX5LgpfDcCmLd1CSfJ75kA06Ubt+QdjIDpt3NZq+z96Ye5C7Ea24C7Qn4VqUnqPdQLGGAv44BLw==
+  dependencies:
+    "@catalyst-monitor/core" "^0.0.2"
+    react "^18.2.0"
+    react-router "^6.19.0"
 
 "@esbuild/android-arm64@0.18.20":
   version "0.18.20"
@@ -492,6 +501,11 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.11.0.tgz#e0e45ac3fff9d8a126916f166809825537e9f955"
   integrity sha512-BHdhcWgeiudl91HvVa2wxqZjSHbheSgIiDvxrF1VjFzBzpTtuDPkOdOi3Iqvc08kXtFkLjhbS+ML9aM8mJS+wQ==
 
+"@remix-run/router@1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.12.0.tgz#e89b64b6fa97a8a5b740a4c38c2904b80f1f229a"
+  integrity sha512-2hXv036Bux90e1GXTWSMfNzfDDK8LA8JYEWfyHxzvwdp6GyoWEovKc9cotb3KCKmkdwsIBuFGX7ScTWyiHv7Eg==
+
 "@types/babel__core@^7.20.3":
   version "7.20.3"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.3.tgz#d5625a50b6f18244425a1359a858c73d70340778"
@@ -531,9 +545,9 @@
   integrity sha512-U3PUjAudAdJBeC2pgN8uTIKgxrb4nlDF3SF0++EldXQvQBGkpFZMSnwQiIoDU77tv45VgNkl/L4ouD+rEomujw==
 
 "@types/node@>=13.7.0":
-  version "20.9.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.1.tgz#9d578c610ce1e984adda087f685ace940954fe19"
-  integrity sha512-HhmzZh5LSJNS5O8jQKpJ/3ZcrrlG6L70hpGqMIAoM9YVD0YBRNWYsfwcXq8VnSjlNpCpgLzMXdiPo+dxcvSmiA==
+  version "20.9.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.2.tgz#002815c8e87fe0c9369121c78b52e800fadc0ac6"
+  integrity sha512-WHZXKFCEyIUJzAwh3NyyTHYSR35SevJ6mZ1nWwJafKtiQbqRTIKSRcw3Ma3acqgsent3RRDqeVwpHntMk+9irg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1495,6 +1509,13 @@ react-router@6.18.0:
   integrity sha512-vk2y7Dsy8wI02eRRaRmOs9g2o+aE72YCx5q9VasT1N9v+lrdB79tIqrjMfByHiY5+6aYkH2rUa5X839nwWGPDg==
   dependencies:
     "@remix-run/router" "1.11.0"
+
+react-router@^6.19.0:
+  version "6.19.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.19.0.tgz#6d5062fa33495859daca98d86292ab03b037a9ca"
+  integrity sha512-0W63PKCZ7+OuQd7Tm+RbkI8kCLmn4GPjDbX61tWljPxWgqTKlEpeQUwPkT1DRjYhF8KSihK0hQpmhU4uxVMcdw==
+  dependencies:
+    "@remix-run/router" "1.12.0"
 
 react@^18.2.0:
   version "18.2.0"
