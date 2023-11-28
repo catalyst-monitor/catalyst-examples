@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { CatalystInstaller } from '@catalyst-monitor/nextjs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <CatalystInstaller
+          serverSystemName="catalyst-nextjs-example-be"
+          clientSystemName="catalyst-nextjs-example-fe"
+          privateKey="CqZNUYrUBaqcsacZCfSO/e4afBQ98WOqFdHQT7N6"
+          publicKey="UsHtftJZKdkF9WZ7DT4HSWQk08QHwZiUwEwab8wd"
+          version="0.0.1"
+          baseUrl="http://localhost:7070"
+        />
+        {children}
+      </body>
     </html>
   )
 }
