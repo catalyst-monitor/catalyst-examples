@@ -1,8 +1,9 @@
-const path = require('path')
-const { withCatalystConfig } = require('@catalyst-monitor/nextjs')
+import * as catalyst from '@catalyst-monitor/nextjs/config'
+
+console.log(catalyst)
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withCatalystConfig(
+export default catalyst.withCatalystConfig(
   {
     reactStrictMode: false,
   },
@@ -14,5 +15,3 @@ const nextConfig = withCatalystConfig(
     baseUrl: 'http://localhost:7070',
   }
 )
-
-module.exports = nextConfig
