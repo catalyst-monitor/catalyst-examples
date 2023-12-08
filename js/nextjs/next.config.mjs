@@ -1,7 +1,5 @@
 import * as catalyst from '@catalyst-monitor/nextjs/config'
 
-console.log(catalyst)
-
 /** @type {import('next').NextConfig} */
 export default catalyst.withCatalystConfig(
   {
