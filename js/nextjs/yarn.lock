@@ -32,6 +32,13 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.23.4.tgz#409fbe690c333bb70187e2de4021e1e47a026661"
   integrity sha512-vf3Xna6UEprW+7t6EtOmFpHNAuxw3xqPZghy+brsnusscJRW5BMUzzHZc5ICjULee81WeUV2jjakG09MDglJXQ==
 
+"@babel/runtime@^7.21.0":
+  version "7.23.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.5.tgz#11edb98f8aeec529b82b211028177679144242db"
+  integrity sha512-NdUTHcPe4C99WxPub+K9l9tK5/lV4UXIoaHSYgzco9BCyjKAAwzdBI+wWtYqHt7LJdbo74ZjRPJgzVweq1sz0w==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/runtime@^7.23.2":
   version "7.23.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.4.tgz#36fa1d2b36db873d25ec631dcc4923fdc1cf2e2e"
@@ -47,6 +54,26 @@
     "@babel/helper-string-parser" "^7.23.4"
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
+
+"@bufbuild/protobuf@^1.5.0":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.5.1.tgz#5cecbb7d8bc9a5daaff9b8b4d0ef9bbc64c80e73"
+  integrity sha512-LX+MeB1AzlbqgJXkq83lilQpLGnPvsAMj7SH8KtJAmQfBc55ee78Stxuff/HMw0xLMYJN3P1FBh5TENgjJof1w==
+
+"@catalyst-monitor/core@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.4.tgz#a0688d9ba79b8d56ef4638868e4ab8a956ce585d"
+  integrity sha512-Z2MYvwH/UlbkTNagYYSr7mf3rPM/Inu7aJSTHsBsH1E5hAAmIz+LfrA4RPWuhuyXUCFE+cNPkcJF5YNMcCnYng==
+  dependencies:
+    "@bufbuild/protobuf" "^1.5.0"
+
+"@catalyst-monitor/nextjs@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/nextjs/-/nextjs-0.0.5.tgz#9f0ab03d53ea8489d93f5b0df4f874afc97cba63"
+  integrity sha512-cYRdDVpatIoxKk9S66OpLVZZiWtC06uDX3DDv4S5DRz9CrU8zMhe90mHeovghpu4zNHxoP2/G5+L16GhZBJr7g==
+  dependencies:
+    "@catalyst-monitor/core" "^0.0.4"
+    date-fns "^2.30.0"
 
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
@@ -555,6 +582,13 @@ damerau-levenshtein@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
+
+date-fns@^2.30.0:
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
 
 debug@^3.2.7:
   version "3.2.7"
