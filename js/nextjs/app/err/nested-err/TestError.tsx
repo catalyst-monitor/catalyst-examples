@@ -1,4 +1,3 @@
 export default function TestError(): React.ReactNode {
-  console.log('ERROR!')
-  throw new Error('Test error')
+  throw new Error('Example of nested error.')
 }

@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>Hello from panel child!</div>
+  return <p>Hello from panel child!</p>
 }

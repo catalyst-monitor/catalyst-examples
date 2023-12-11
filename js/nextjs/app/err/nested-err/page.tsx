@@ -2,8 +2,8 @@ import TestError from './TestError'
 
 export default function Page() {
   return (
-    <div>
+    <main>
       <TestError />
-    </div>
+    </main>
   )
 }

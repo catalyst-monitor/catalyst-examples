@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <div>
-      <div>This page will intercept!</div>
+    <main>
+      <p>This page will intercept!</p>
       <Link href="./tointer">Intercept me!</Link>
-    </div>
+    </main>
   )
 }

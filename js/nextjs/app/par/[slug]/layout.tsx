@@ -6,9 +6,9 @@ export default function Layout({
   panel: React.ReactNode
 }) {
   return (
-    <div>
+    <main>
       {children}
       {panel}
-    </div>
+    </main>
   )
 }

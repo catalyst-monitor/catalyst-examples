@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { CatalystInstaller } from '@catalyst-monitor/nextjs'
+import styles from './layout.module.css'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +21,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <CatalystInstaller />
-        {children}
+        <div className={styles.layoutContent}>
+          <Link className={styles.home} href="/">
+            Go Home
+          </Link>
+          <div className={styles.contentWrapper}>{children}</div>
+        </div>
       </body>
     </html>
   )
