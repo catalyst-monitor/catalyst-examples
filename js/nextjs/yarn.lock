@@ -60,19 +60,19 @@
   resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.5.1.tgz#5cecbb7d8bc9a5daaff9b8b4d0ef9bbc64c80e73"
   integrity sha512-LX+MeB1AzlbqgJXkq83lilQpLGnPvsAMj7SH8KtJAmQfBc55ee78Stxuff/HMw0xLMYJN3P1FBh5TENgjJof1w==
 
-"@catalyst-monitor/core@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.4.tgz#a0688d9ba79b8d56ef4638868e4ab8a956ce585d"
-  integrity sha512-Z2MYvwH/UlbkTNagYYSr7mf3rPM/Inu7aJSTHsBsH1E5hAAmIz+LfrA4RPWuhuyXUCFE+cNPkcJF5YNMcCnYng==
+"@catalyst-monitor/core@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.7.tgz#7f44b47190ac762409ec3bc8643e8715dd1d46e5"
+  integrity sha512-ddC9qusMahLJj04ttdKgk1xSADkwn+BeHq8gW2vRhF4S/wOD8gmm8gbRBSVCEWPIwcyRaXTQzZf1l5jRAv0/lA==
   dependencies:
     "@bufbuild/protobuf" "^1.5.0"
 
-"@catalyst-monitor/nextjs@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/nextjs/-/nextjs-0.0.5.tgz#9f0ab03d53ea8489d93f5b0df4f874afc97cba63"
-  integrity sha512-cYRdDVpatIoxKk9S66OpLVZZiWtC06uDX3DDv4S5DRz9CrU8zMhe90mHeovghpu4zNHxoP2/G5+L16GhZBJr7g==
+"@catalyst-monitor/nextjs@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/nextjs/-/nextjs-0.0.8.tgz#d2104aa91e3fc476c6e959aad50d84424d996d3b"
+  integrity sha512-sb6xhUno8rNM17AXPJF4iC1eI798kxLLr24582H1v73raDzSMyy4Hi3AbPUOzTYargcy6oKy3w8JchZJtZ4RvQ==
   dependencies:
-    "@catalyst-monitor/core" "^0.0.4"
+    "@catalyst-monitor/core" "^0.0.7"
     date-fns "^2.30.0"
 
 "@eslint-community/eslint-utils@^4.2.0":

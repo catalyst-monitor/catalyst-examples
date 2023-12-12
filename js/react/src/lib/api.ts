@@ -1,4 +1,4 @@
-import { catalystWebFetch as cFetch } from '@catalyst-monitor/core'
+import { catalystWebFetch as cFetch } from '@catalyst-monitor/core/web'
 
 const baseUrl = 'http://localhost:3000'
 

@@ -19,7 +19,7 @@ import cors from 'cors'
 import {
   catalystNodeFetch as cFetch,
   installNodeBase,
-} from '@catalyst-monitor/core'
+} from '@catalyst-monitor/core/node'
 
 // Initialize Catalyst ASAP.
 const sdf = installNodeBase({

@@ -26,7 +26,7 @@ import { createRoot } from 'react-dom/client'
 import Parent from './components/Parent.tsx'
 import Counter from './components/Counter.tsx'
 import { wrapRoutes } from '@catalyst-monitor/react-router'
-import { installWebBase } from '@catalyst-monitor/core'
+import { installWebBase } from '@catalyst-monitor/core/web'
 
 // Install Catalyst ASAP.
 installWebBase({

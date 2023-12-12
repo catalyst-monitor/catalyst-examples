@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { catalystWebFetch as cFetch } from '@catalyst-monitor/nextjs'
+import { catalystWebFetch as cFetch } from '@catalyst-monitor/nextjs/client'
 import styles from './page.module.css'
 
 export default function Page() {
