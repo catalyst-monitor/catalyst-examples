@@ -1,8 +1,11 @@
 This is an example of a [Next.js](https://nextjs.org/) project running [Catalyst](https://www.catalystmonitor.com). Please see the other examples for other frameworks.
 
-## Set up example
+## Setting up for your own project.
 
-To set up Catalyst, all you need to do is update [next.config.mjs](next.config.mjs) as shown. Wrap your existing Next config, and Catalyst will auto-instrument itself.
+To set up Catalyst for your own project, you just need to do the following:
+
+1. Update your [next.config.mjs](next.config.mjs) as shown. Wrap your existing Next config, and Catalyst will auto-instrument itself.
+1. Render the `CatalystInstaller` component. It's recommended to render it as soon as possible in the [root layout](app/layout.tsx).
 
 ## Running the example
 

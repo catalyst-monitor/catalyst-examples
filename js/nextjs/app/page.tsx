@@ -60,6 +60,9 @@ export default function Home() {
         <Link className={styles.mainLink} href="/err/random-err">
           Cause a server error that happens randomly.
         </Link>
+        <Link className={styles.mainLink} href="/err/layout-err">
+          Cause an error in the layout.
+        </Link>
       </div>
     </main>
   )
