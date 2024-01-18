@@ -33,9 +33,9 @@
   integrity sha512-vf3Xna6UEprW+7t6EtOmFpHNAuxw3xqPZghy+brsnusscJRW5BMUzzHZc5ICjULee81WeUV2jjakG09MDglJXQ==
 
 "@babel/runtime@^7.21.0":
-  version "7.23.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.5.tgz#11edb98f8aeec529b82b211028177679144242db"
-  integrity sha512-NdUTHcPe4C99WxPub+K9l9tK5/lV4UXIoaHSYgzco9BCyjKAAwzdBI+wWtYqHt7LJdbo74ZjRPJgzVweq1sz0w==
+  version "7.23.8"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.8.tgz#8ee6fe1ac47add7122902f257b8ddf55c898f650"
+  integrity sha512-Y7KbAP984rn1VGMbGqKmBLio9V7y5Je9GvU4rQPCPinCyNfUcToxIXl06d59URp/F3LwinvODxab5N/G6qggkw==
   dependencies:
     regenerator-runtime "^0.14.0"
 
@@ -56,23 +56,21 @@
     to-fast-properties "^2.0.0"
 
 "@bufbuild/protobuf@^1.5.0":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.5.1.tgz#5cecbb7d8bc9a5daaff9b8b4d0ef9bbc64c80e73"
-  integrity sha512-LX+MeB1AzlbqgJXkq83lilQpLGnPvsAMj7SH8KtJAmQfBc55ee78Stxuff/HMw0xLMYJN3P1FBh5TENgjJof1w==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.6.0.tgz#c33128f70330312e2bd78fd7e988576595b8f74d"
+  integrity sha512-hp19vSFgNw3wBBcVBx5qo5pufCqjaJ0Cfk5H/pfjNOfNWU+4/w0QVOmfAOZNRrNWRrVuaJWxcN8P2vhOkkzbBQ==
 
-"@catalyst-monitor/core@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.7.tgz#7f44b47190ac762409ec3bc8643e8715dd1d46e5"
-  integrity sha512-ddC9qusMahLJj04ttdKgk1xSADkwn+BeHq8gW2vRhF4S/wOD8gmm8gbRBSVCEWPIwcyRaXTQzZf1l5jRAv0/lA==
+"@catalyst-monitor/core@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.10.tgz#2e4aef7f4324a326e4535ea0525a9bd6637ebe49"
+  integrity sha512-rLqI/a4gZUjXEKyBt+wo0LDNiGXUmqQ2nTpD4oXfA2VsSP7HKeeCnrdqytkPS69T52g8A67sgLOfh0+q4jsovQ==
   dependencies:
     "@bufbuild/protobuf" "^1.5.0"
 
-"@catalyst-monitor/nextjs@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/nextjs/-/nextjs-0.0.8.tgz#d2104aa91e3fc476c6e959aad50d84424d996d3b"
-  integrity sha512-sb6xhUno8rNM17AXPJF4iC1eI798kxLLr24582H1v73raDzSMyy4Hi3AbPUOzTYargcy6oKy3w8JchZJtZ4RvQ==
+"@catalyst-monitor/nextjs@file:/home/bill/Work/codebase-doctor-js/packages/nextjs":
+  version "0.0.10"
   dependencies:
-    "@catalyst-monitor/core" "^0.0.7"
+    "@catalyst-monitor/core" "^0.0.10"
     date-fns "^2.30.0"
 
 "@eslint-community/eslint-utils@^4.2.0":
