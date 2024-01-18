@@ -7,13 +7,17 @@ export default function Home() {
     <main>
       <article>
         <p>
-          You&apos;ve successfully ran the
-          [Catalyst](https://www.catalystmonitor.com) example!
+          You&apos;ve successfully ran the{' '}
+          <a href="https://www.catalystmonitor.com">Catalyst</a> example!
         </p>
         <p>
           This is a simple example of the capabilities and features of Catalyst
           that you get with no manual instrumentation. Click around and check
-          out your dashboard at [https://app.catalystmonitor.com]!
+          out your dashboard at{' '}
+          <a href="https://www.catalystmonitor.com">
+            https://app.catalystmonitor.com
+          </a>
+          !
         </p>
       </article>
       <div>
