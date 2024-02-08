@@ -214,23 +214,23 @@
     to-fast-properties "^2.0.0"
 
 "@bufbuild/protobuf@^1.5.0":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.5.1.tgz#5cecbb7d8bc9a5daaff9b8b4d0ef9bbc64c80e73"
-  integrity sha512-LX+MeB1AzlbqgJXkq83lilQpLGnPvsAMj7SH8KtJAmQfBc55ee78Stxuff/HMw0xLMYJN3P1FBh5TENgjJof1w==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.6.0.tgz#c33128f70330312e2bd78fd7e988576595b8f74d"
+  integrity sha512-hp19vSFgNw3wBBcVBx5qo5pufCqjaJ0Cfk5H/pfjNOfNWU+4/w0QVOmfAOZNRrNWRrVuaJWxcN8P2vhOkkzbBQ==
 
-"@catalyst-monitor/core@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.7.tgz#7f44b47190ac762409ec3bc8643e8715dd1d46e5"
-  integrity sha512-ddC9qusMahLJj04ttdKgk1xSADkwn+BeHq8gW2vRhF4S/wOD8gmm8gbRBSVCEWPIwcyRaXTQzZf1l5jRAv0/lA==
+"@catalyst-monitor/core@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.13.tgz#26672e133d42b00e3949dc7fedd967b7cd5a4203"
+  integrity sha512-PWJ49HrnLxiht9WEJMJagUCvBKJmF7lbd1PvAr1zzQqZK46Z5rrAW6Fe9Cxy0LACYQAj7EwURcyMtNgFjR3unA==
   dependencies:
     "@bufbuild/protobuf" "^1.5.0"
 
-"@catalyst-monitor/react-router@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/react-router/-/react-router-0.0.7.tgz#aee04e3acec112ad6bc81fa15d67f21370522af4"
-  integrity sha512-mThdqDTFHDdtFYxYi22/W7TnpG1JSuDwGen1zv+sLSqUSWU7qbt1S8lqbfSJxylYprmP0yE1JxDTjQ/pLIKXTQ==
+"@catalyst-monitor/react-router@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/react-router/-/react-router-0.0.13.tgz#6ee30be95574981908f3436f4ab1e9c1f18b434c"
+  integrity sha512-gcxVibA7ulvk0XIN9aG3zFCC8B6hBLE/64l+kBKhCd07am3ep6vVALH5VVktWzJ/A08PPtKleF++ZGbLCnslCQ==
   dependencies:
-    "@catalyst-monitor/core" "^0.0.7"
+    "@catalyst-monitor/core" "^0.0.13"
     react "^18.2.0"
     react-router "^6.19.0"
 
@@ -1581,10 +1581,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-vite@^4.4.5:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-4.5.0.tgz#ec406295b4167ac3bc23e26f9c8ff559287cff26"
-  integrity sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==
+vite@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-4.5.2.tgz#d6ea8610e099851dad8c7371599969e0f8b97e82"
+  integrity sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==
   dependencies:
     esbuild "^0.18.10"
     postcss "^8.4.27"

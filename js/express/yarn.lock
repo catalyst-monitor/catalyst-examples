@@ -12,19 +12,19 @@
   resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.5.1.tgz#5cecbb7d8bc9a5daaff9b8b4d0ef9bbc64c80e73"
   integrity sha512-LX+MeB1AzlbqgJXkq83lilQpLGnPvsAMj7SH8KtJAmQfBc55ee78Stxuff/HMw0xLMYJN3P1FBh5TENgjJof1w==
 
-"@catalyst-monitor/core@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.7.tgz#7f44b47190ac762409ec3bc8643e8715dd1d46e5"
-  integrity sha512-ddC9qusMahLJj04ttdKgk1xSADkwn+BeHq8gW2vRhF4S/wOD8gmm8gbRBSVCEWPIwcyRaXTQzZf1l5jRAv0/lA==
+"@catalyst-monitor/core@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.13.tgz#26672e133d42b00e3949dc7fedd967b7cd5a4203"
+  integrity sha512-PWJ49HrnLxiht9WEJMJagUCvBKJmF7lbd1PvAr1zzQqZK46Z5rrAW6Fe9Cxy0LACYQAj7EwURcyMtNgFjR3unA==
   dependencies:
     "@bufbuild/protobuf" "^1.5.0"
 
-"@catalyst-monitor/express@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/express/-/express-0.0.7.tgz#0021030103955d1d2d89f2b83201aef2f3ad07da"
-  integrity sha512-fFH61NZuvF3DiFp5rH//IAiXbPtr24z2335BmHRsAUl5vX+FCDtzcovZTJ3dk4dQdcV+Y4FlMU5Fr6CKjqMphw==
+"@catalyst-monitor/express@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/express/-/express-0.0.13.tgz#b35e390fdfca0e068ae5e7db892d7c6ad235d8b9"
+  integrity sha512-T82f4ua1fa4WQ9OOptAeJiAHBS+p+i3CFjybBDuw+XeVj+Adut1+/Z4iZ/HN8a3GZMXXZ6MBY0bpDdCw2VBYSw==
   dependencies:
-    "@catalyst-monitor/core" "^0.0.7"
+    "@catalyst-monitor/core" "^0.0.13"
     express "^4.18.2"
 
 "@eslint-community/eslint-utils@^4.2.0":
