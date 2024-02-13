@@ -1,0 +1,55 @@
+@import '@fontsource/fira-mono';
+
+:root {
+	--colorOnSurface: #1b1b1f;
+	--colorSurface: #fefbff;
+  --colorOnSurfaceVariant: #45464f;
+	--colorPrimary: #2663DF;
+  --colorOnPrimary: #fff;
+  --colorOutline: #757780;
+}
+
+
+body,
+html {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: var(--colorSurface);
+  color: var(--colorOnSurface);
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--colorPrimary);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+input[type="text"] {
+  background-color: var(--colorSurface);
+  border: none;
+  font-size: 1rem;
+  padding: 12px 8px;
+  outline: 1px solid var(--colorOutline);
+  color: var(--colorOnSurface);
+  border-radius: 4px;
+}
+
+button {
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  background-color: var(--colorPrimary);
+  color: var(--colorOnPrimary);
+}
