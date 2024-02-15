@@ -4,9 +4,9 @@
         "strict": true,
         "strictNullChecks": true,
         "esModuleInterop": true,
-        "moduleResolution": "node",
+        "moduleResolution": "nodenext",
         "allowJs": true,
-        "module": "commonjs",
+        "module": "nodenext",
         "declaration": true,
         "outDir": "build"
     },

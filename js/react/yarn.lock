@@ -218,19 +218,19 @@
   resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-1.6.0.tgz#c33128f70330312e2bd78fd7e988576595b8f74d"
   integrity sha512-hp19vSFgNw3wBBcVBx5qo5pufCqjaJ0Cfk5H/pfjNOfNWU+4/w0QVOmfAOZNRrNWRrVuaJWxcN8P2vhOkkzbBQ==
 
-"@catalyst-monitor/core@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.13.tgz#26672e133d42b00e3949dc7fedd967b7cd5a4203"
-  integrity sha512-PWJ49HrnLxiht9WEJMJagUCvBKJmF7lbd1PvAr1zzQqZK46Z5rrAW6Fe9Cxy0LACYQAj7EwURcyMtNgFjR3unA==
+"@catalyst-monitor/core@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/core/-/core-0.0.14.tgz#3876cffa0ab08809aa5a67f19ce1d764ebf5476d"
+  integrity sha512-cF9dU0Qmx5yIbqY9bK5/FZ97eYCTjP/rGqN+ZDkn//CqX+/i8w4LZa8g96ZvxzAZYipwV3DjBMCesV6WMXUN0g==
   dependencies:
     "@bufbuild/protobuf" "^1.5.0"
 
-"@catalyst-monitor/react-router@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@catalyst-monitor/react-router/-/react-router-0.0.13.tgz#6ee30be95574981908f3436f4ab1e9c1f18b434c"
-  integrity sha512-gcxVibA7ulvk0XIN9aG3zFCC8B6hBLE/64l+kBKhCd07am3ep6vVALH5VVktWzJ/A08PPtKleF++ZGbLCnslCQ==
+"@catalyst-monitor/react-router@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@catalyst-monitor/react-router/-/react-router-0.0.14.tgz#f21b5b099a660980d7e4fa0b804572f9921480aa"
+  integrity sha512-PjC4X54HZoAzYQGfCQsdf+Xtd44vf3CMFvwa4XfZy02Cr9FuQ4qOh7J2vIul1ZsVWobGK7ztC9939kQhFo1gzw==
   dependencies:
-    "@catalyst-monitor/core" "^0.0.13"
+    "@catalyst-monitor/core" "^0.0.14"
     react "^18.2.0"
     react-router "^6.19.0"
 
