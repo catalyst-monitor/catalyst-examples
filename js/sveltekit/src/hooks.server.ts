@@ -14,12 +14,9 @@ installNodeBase({
   privateKey: CATALYST_PRIVATE_KEY,
   systemName: PUBLIC_CATALYST_SYSTEM_NAME,
   version: PUBLIC_CATALYST_VERSION,
-  baseUrl: 'http://localhost:7070',
 })
 
-export const handleError = wrapCatalystServerErrorHandler(({ error }) => {
-  console.error(error)
-})
+export const handleError = wrapCatalystServerErrorHandler(() => {})
 
 export const handleFetch = wrapCatalystFetchHandler(['http://localhost:5174'])
 

@@ -13,7 +13,6 @@ installWebBase({
   version: PUBLIC_CATALYST_VERSION,
   publicKey: PUBLIC_CATALYST_PUBLIC_KEY,
   userAgent: window.navigator.userAgent,
-  baseUrl: 'http://localhost:7070',
 })
 
 export const handleError = catalystClientErrorHandler(() => {})
