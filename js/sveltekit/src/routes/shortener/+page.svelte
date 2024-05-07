@@ -33,10 +33,6 @@
         <span>/shortener/</span><input name="shortLink" type="text" />
       </div>
     </label>
-    <label>
-      <span class="labelText">Password</span>
-      <input class="passwordInput" name="password" type="text" />
-    </label>
   </div>
 
   <div class="buttonRow">
@@ -45,7 +41,7 @@
 </form>
 
 <div class="recentLinks">
-  <div>Recently submitted short links:</div>
+  <div>Your short links:</div>
   {#each data.links as { shortLink, createdMillis, fullUrl }}
     <div class="link">
       <a href={`/shortener/${shortLink}`}>/shortener/{shortLink}</a>

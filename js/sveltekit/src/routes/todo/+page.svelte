@@ -1,18 +1,24 @@
 <script lang="ts">
-  import { goto } from '$app/navigation'
+  import type { PageData } from './$types'
 
-  async function createAccount() {
-    const resp = await fetch('/api/todo', {
+  export let data
+
+  let todo: string = ''
+
+  let updatedTodos = [...data.todos]
+
+  async function createTodo() {
+    const resp = await fetch(`/api/todo/`, {
       method: 'put',
+      body: JSON.stringify({
+        todo,
+      }),
     })
+    todo = ''
+
     const json = await resp.json()
-
-    goto(`/todo/${json['password']}`)
-  }
-
-  let password: string
-  function goToAccount() {
-    goto(`/todo/${password}`)
+    updatedTodos.push(json)
+    updatedTodos = updatedTodos
   }
 </script>
 
@@ -24,48 +30,87 @@
   />
 </svelte:head>
 
-<h1>Todo List</h1>
-<p>
-  This is a simple server-stored todo list. Try accessing the same todo list in
-  multiple browser tabs to expose a multitude of fun bugs!
-</p>
-<p>
-  <strong
-    >If this example is remotely hosted, please do not put any sensitive data in
-    here!</strong
-  >
-</p>
+<h1>Todo</h1>
 
-<p>To start, click "Create" and take note of the password generated for you.</p>
-<div class="createRow">
-  <button on:click={createAccount}>Create</button>
-</div>
-
-<p>Return to your previous todo list by entering the generated password.</p>
-<div class="restoreRow">
+<div class="todoInputRow">
   <input
-    placeholder="Previously generated password"
+    placeholder="Don't forget to do this..."
     type="text"
-    bind:value={password}
+    bind:value={todo}
   />
-  <button on:click={goToAccount}>Restore</button>
+  <button on:click={createTodo}>Create</button>
 </div>
+
+{#each updatedTodos as t}
+  <div class="todo">
+    <input
+      type="checkbox"
+      value={t.finishedMillis != null}
+      disabled={t.finishedMillis != null}
+      on:change={async () => {
+        await fetch(`/api/todo/${t.id}`, { method: 'post' })
+        t.finishedMillis = new Date().getTime()
+        updatedTodos = updatedTodos
+      }}
+    />
+    <div class="todoText">
+      <span class={t.finishedMillis != null ? 'finished' : ''}>{t.todo}</span>
+      <div class="todoDate">
+        {#if t.finishedMillis != null}
+          Finished on {new Date(t.finishedMillis).toDateString()}
+        {:else}
+          Created on {new Date(t.createdMillis).toDateString()}
+        {/if}
+      </div>
+    </div>
+    <button
+      class="delete"
+      on:click={async () => {
+        await fetch(`/api/todo/${t.id}`, { method: 'delete' })
+        updatedTodos = updatedTodos.filter((d) => d.id != t.id)
+      }}
+    >
+      Delete
+    </button>
+  </div>
+{:else}
+  <p>To get started, enter something to do above!</p>
+{/each}
 
 <style>
   h1 {
     text-align: center;
   }
 
-  .createRow {
-    margin-bottom: 36px;
-  }
-
-  .restoreRow {
+  .todoInputRow {
     display: flex;
+    margin-top: 36px;
+    margin-bottom: 12px;
   }
 
-  .restoreRow input {
+  .todoInputRow input {
     flex: 0 1 100%;
     margin-right: 12px;
+  }
+
+  .todo {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--colorOutline);
+  }
+
+  .todoText {
+    flex: 0 1 100%;
+    margin-left: 12px;
+  }
+
+  .finished {
+    text-decoration: line-through;
+  }
+
+  .todoDate {
+    font-size: 12px;
+    color: var(--colorOnSurfaceVariant);
   }
 </style>

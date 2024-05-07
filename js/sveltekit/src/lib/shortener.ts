@@ -1,36 +1,37 @@
 const links: {
   [shortLink: string]:
-    | { createdMillis: number; password: string; fullUrl: string }
+    | { createdMillis: number; userId: string; fullUrl: string }
     | undefined
 } = {}
 
 export function setShortLink(
+  userId: string,
   shortLink: string,
-  password: string,
   fullUrl: string
 ) {
   if (shortLink.length < 1) {
     throw new Error('Short link is too short!')
   }
   const existing = links[shortLink]
-  if (existing != null && existing.password != password) {
+  if (existing != null && existing.userId != userId) {
     throw new Error('Not authorized to change!')
   }
 
   links[shortLink] = {
     createdMillis: new Date().getTime(),
-    password,
+    userId,
     fullUrl,
   }
 }
 
-export function listRecentShortLinks(): {
+export function listShortLinks(userId: string): {
   shortLink: string
   createdMillis: number
   fullUrl: string
 }[] {
   return Object.entries(links)
     .filter((e) => e[1] != undefined)
+    .filter(([, link]) => link!.userId == userId)
     .map(([k, v]) => {
       return {
         shortLink: k,

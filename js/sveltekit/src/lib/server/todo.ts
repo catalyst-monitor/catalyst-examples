@@ -6,40 +6,42 @@ interface Todo {
 }
 
 const todoAccounts: {
-  [password: string]: {
+  [userId: string]: {
     todos: Todo[]
   }
 } = {}
 
-export function createAccount(password: string) {
-  todoAccounts[password] = { todos: [] }
+export function listTodos(userId: string): Todo[] {
+  prepareTodos(userId)
+  return todoAccounts[userId].todos
 }
 
-export function deleteAccount(password: string) {
-  delete todoAccounts[password]
-}
-
-export function listTodos(password: string): Todo[] {
-  return todoAccounts[password].todos
-}
-
-export function createTodo(password: string, todoText: string): Todo {
+export function createTodo(userId: string, todoText: string): Todo {
+  prepareTodos(userId)
   const newTodo = {
     id: crypto.randomUUID(),
     todo: todoText,
     created: new Date(),
   }
-  todoAccounts[password].todos.push(newTodo)
+  todoAccounts[userId].todos.push(newTodo)
   return newTodo
 }
 
-export function finishTodo(password: string, id: string) {
-  const finishedIdx = todoAccounts[password].todos.findIndex((t) => t.id == id)
-  todoAccounts[password].todos[finishedIdx].finished = new Date()
+export function finishTodo(userId: string, id: string) {
+  const finishedIdx = todoAccounts[userId].todos.findIndex((t) => t.id == id)
+  todoAccounts[userId].todos[finishedIdx].finished = new Date()
 }
 
-export function deleteTodo(password: string, id: string) {
-  todoAccounts[password].todos = todoAccounts[password].todos.filter(
+export function deleteTodo(userId: string, id: string) {
+  todoAccounts[userId].todos = todoAccounts[userId].todos.filter(
     (t) => t.id != id
   )
+}
+
+function prepareTodos(userId: string) {
+  if (!(userId in todoAccounts)) {
+    todoAccounts[userId] = {
+      todos: [],
+    }
+  }
 }
