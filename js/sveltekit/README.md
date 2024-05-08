@@ -1,38 +1,27 @@
-# create-svelte
+# Catalyst Sveltekit Example
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is an example implementation of the SvelteKit library for [Catalyst](https://www.catalystmonitor.com).
 
-## Creating a project
+## Running the example
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Get your keys
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+In order to run the example, you must sign up for Catalyst and get your keys. Find instructions [here](https://www.catalystmonitor.com/docs/signup).
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+### Set your keys
 
-## Developing
+Copy `.env.example` to `.env.local` and update the values for `PUBLIC_CATALYST_PUBLIC_KEY` and `CATALYST_PRIVATE_KEY` from the step above.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Run the example
+
+You can now install the dependencies and run the example. Run in your terminal:
 
 ```bash
-npm run dev
+yarn install # Install the dependencies
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn dev # Run the dev server.
 ```
 
-## Building
+## Install Catalyst in your own SvelteKit project:
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+In order to not duplicate documentation, please find the most up-to-date documentation [here](https://www.catalystmonitor.com/docs/install/javascript/sveltekit).
