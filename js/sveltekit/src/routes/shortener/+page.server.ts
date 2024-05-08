@@ -1,4 +1,8 @@
-import { listShortLinks, setShortLink } from '$lib/shortener.js'
+import {
+  deleteShortLink,
+  listShortLinks,
+  setShortLink,
+} from '$lib/shortener.js'
 import { error, redirect } from '@sveltejs/kit'
 
 export const actions = {
@@ -12,6 +16,17 @@ export const actions = {
     const fullUrl = form.get('fullUrl')!.toString()
 
     setShortLink(user.id, shortLink, fullUrl)
+  },
+
+  delete: async ({ request, locals }) => {
+    const user = locals.user
+    if (user == null) {
+      error(403, 'Not authorized')
+    }
+    const formData = await request.formData()
+    const shortLink = formData.get('shortLink')!.toString()
+
+    deleteShortLink(user.id, shortLink)
   },
 }
 

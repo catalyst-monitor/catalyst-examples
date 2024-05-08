@@ -50,3 +50,12 @@ export function getShortLink(shortLink: string): string | undefined {
   }
   return existing.fullUrl
 }
+
+export function deleteShortLink(userId: string, shortLink: string) {
+  const existing = links[shortLink]
+  if (existing != null && userId == existing.userId) {
+    delete links[shortLink]
+  } else {
+    throw new Error('Could not delete')
+  }
+}

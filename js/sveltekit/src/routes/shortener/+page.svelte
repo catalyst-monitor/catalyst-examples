@@ -43,11 +43,25 @@
 <div class="recentLinks">
   <div>Your short links:</div>
   {#each data.links as { shortLink, createdMillis, fullUrl }}
-    <div class="link">
-      <a href={`/shortener/${shortLink}`}>/shortener/{shortLink}</a>
-      <div class="linkDesc">
-        {fullUrl} - created {new Date(createdMillis).toDateString()}
+    <div class="shortLink">
+      <div class="linkContent">
+        <a class="tryLink" href={`/shortener/${shortLink}`}
+          >/shortener/{shortLink}</a
+        >
+        <div class="linkDesc">
+          {fullUrl} - created {new Date(createdMillis).toDateString()}
+        </div>
       </div>
+
+      <form method="POST" action="?/delete">
+        <!-- This randomly blows up -->
+        <input
+          type="hidden"
+          name="shortLink"
+          value={Math.random() * 7 >= 1 ? shortLink : ''}
+        />
+        <button class="delete">Delete</button>
+      </form>
     </div>
   {/each}
 </div>
@@ -94,11 +108,6 @@
     flex: 0 1 100%;
   }
 
-  .passwordInput {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .buttonRow {
     margin-top: 12px;
     text-align: right;
@@ -108,8 +117,10 @@
     margin-top: 36px;
   }
 
-  .link {
+  .shortLink {
     padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   .linkDesc {
