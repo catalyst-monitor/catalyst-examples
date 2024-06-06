@@ -29,24 +29,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@catalyst-monitor/core@npm:^0.0.17":
-  version: 0.0.17
-  resolution: "@catalyst-monitor/core@npm:0.0.17"
+"@catalyst-monitor/core@npm:^0.0.18":
+  version: 0.0.18
+  resolution: "@catalyst-monitor/core@npm:0.0.18"
   dependencies:
     "@bufbuild/protobuf": "npm:^1.5.0"
-  checksum: 10c0/2cb08f5906d3197f6f91bf81ac875048c56cf63f9937751226929befb547c32fa49eb3442d2ab9edccf66ba6a8e2ad0b2dd68e5eead1007ae474cad0e9c318c0
+  checksum: 10c0/a6da3d3413a424d5d2c5ef4c3aad0e78da8bd2af2dd6e0e432111d427d88e43d054aa1dc99cad013be2cfcb7b6ca84de68a978f816f7b1f3a9a82c23857b6f11
   languageName: node
   linkType: hard
 
-"@catalyst-monitor/sveltekit@npm:^0.0.17":
-  version: 0.0.17
-  resolution: "@catalyst-monitor/sveltekit@npm:0.0.17"
+"@catalyst-monitor/sveltekit@npm:0.0.18":
+  version: 0.0.18
+  resolution: "@catalyst-monitor/sveltekit@npm:0.0.18"
   dependencies:
-    "@catalyst-monitor/core": "npm:^0.0.17"
+    "@catalyst-monitor/core": "npm:^0.0.18"
   peerDependencies:
     "@sveltejs/kit": ^2.0.0
     svelte: ^4.0.0
-  checksum: 10c0/9db11741b4ee2429b1409d26c4d49777eb0a4f89c919d577d13220af59201aa5f6341bc68182df787e57d192263b88a94ef9d83c13ade0dcd7af026c9bf4cd57
+  checksum: 10c0/552758065930aab4e8d92bd70bcbbaff41e4a2ad34ed5c5b7b77418110d3719ae893487439579d277ef3088900ca25672647e997ffe32bc86e7c0038a3fba192
   languageName: node
   linkType: hard
 
@@ -3371,7 +3371,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sveltekit@workspace:."
   dependencies:
-    "@catalyst-monitor/sveltekit": "npm:^0.0.17"
+    "@catalyst-monitor/sveltekit": "npm:0.0.18"
     "@fontsource/fira-mono": "npm:^4.5.10"
     "@neoconfetti/svelte": "npm:^1.0.0"
     "@sveltejs/adapter-auto": "npm:^3.0.0"
