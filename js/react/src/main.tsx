@@ -26,14 +26,15 @@ import { createRoot } from 'react-dom/client'
 import Parent from './components/Parent.tsx'
 import Counter from './components/Counter.tsx'
 import { wrapRoutes } from '@catalyst-monitor/react-router'
-import { installWebBase } from '@catalyst-monitor/core/web'
+import Catalyst from '@catalyst-monitor/web'
 
 // Install Catalyst ASAP.
-installWebBase({
+Catalyst.start({
   version: import.meta.env.VITE_CATALYST_VERSION,
   systemName: 'catalyst-js-react-example',
   userAgent: navigator.userAgent,
   publicKey: import.meta.env.VITE_CATALYST_PUBLIC_KEY,
+  baseUrl: import.meta.env.VITE_CATALYST_BASE_URL,
 })
 
 const router = createBrowserRouter(

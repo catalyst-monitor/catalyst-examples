@@ -1,5 +1,3 @@
-import { catalystWebFetch as cFetch } from '@catalyst-monitor/core/web'
-
 const baseUrl = 'http://localhost:3000'
 
 export interface ResponseType {
@@ -8,7 +6,7 @@ export interface ResponseType {
 }
 
 async function fetchInternal(method: string, url: string): Promise<string> {
-  const resp = await cFetch(url, {
+  const resp = await fetch(url, {
     method: method,
   })
   if (resp.status > 299) {

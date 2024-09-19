@@ -16,16 +16,14 @@ import {
   catalystHandler,
 } from '@catalyst-monitor/express'
 import cors from 'cors'
-import {
-  catalystNodeFetch as cFetch,
-  installNodeBase,
-} from '@catalyst-monitor/core/node'
+import Catalyst from '@catalyst-monitor/server'
 
 // Initialize Catalyst ASAP.
-const sdf = installNodeBase({
+Catalyst.start({
   privateKey: process.env.CATALYST_PRIVATE_KEY ?? '',
   systemName: 'catalyst-js-express-example',
   version: process.env.CATALYST_VERSION ?? '',
+  baseUrl: process.env.CATALYST_BASE_URL,
 })
 
 const app = express()
@@ -57,7 +55,7 @@ app.get('/parent/:parentId', async (req, res) => {
 
   // Use the provided Catalyst fetch function, to propagate sessions.
   // The interface is the same as the regular fetch function.
-  const resp = await cFetch(`http://localhost:${port}/child/${parentId}`)
+  const resp = await fetch(`http://localhost:${port}/child/${parentId}`)
   if (!resp.ok) {
     res.sendStatus(500)
     return

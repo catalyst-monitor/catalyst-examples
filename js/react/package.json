@@ -10,11 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@catalyst-monitor/core": "^0.0.14",
-    "@catalyst-monitor/react-router": "^0.0.14",
+    "@catalyst-monitor/react-router": "^0.1.1",
+    "@catalyst-monitor/web": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0"
+    "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -34,5 +34,10 @@
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true
+  },
+  "packageManager": "yarn@4.4.0",
+  "resolutions": {
+    "@catalyst-monitor/react-router": "portal:/home/bill/Work/catalyst-js/packages/react-router",
+    "@catalyst-monitor/web": "portal:/home/bill/Work/catalyst-js/packages/web"
   }
 }
