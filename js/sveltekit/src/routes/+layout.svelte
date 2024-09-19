@@ -2,12 +2,12 @@
   import './styles.css'
   import logo from '$lib/images/catalyst.svg'
   import Catalyst from '@catalyst-monitor/sveltekit/Catalyst.svelte'
-  import { getCatalystWeb } from '@catalyst-monitor/sveltekit/client'
+  import { Catalyst as CatalystSveltkit } from '@catalyst-monitor/sveltekit/client'
   import { browser } from '$app/environment'
 
   export let data
   $: if (browser) {
-    getCatalystWeb().setUserInfo(
+    CatalystSveltkit.getReporter().setUserInfo(
       data.user != null
         ? { loggedInUserName: data.user.name, loggedInId: data.user.id }
         : null
