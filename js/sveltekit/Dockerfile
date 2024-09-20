@@ -2,8 +2,8 @@ FROM node:18-bookworm AS builder
 
 WORKDIR /app
 
-COPY package.json .eslintrc.cjs .eslintignore tsconfig.json vite.config.ts svelte.config.js yarn.lock .env.production ./
-RUN yarn install
+COPY prod_otel_hack.sh package.json .eslintrc.cjs .eslintignore tsconfig.json vite.config.ts svelte.config.js yarn.lock .env.production ./
+RUN yarn install && ./prod_otel_hack.sh
 
 COPY src/ src/
 COPY static/ static/
